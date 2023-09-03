@@ -1,5 +1,4 @@
 import usesBackground from 'assets/typing-cat.gif';
-import usesBackgroundPlaceholder from 'assets/uses-background-placeholder.jpg';
 import { Footer } from 'components/Footer';
 import { Link } from 'components/Link';
 import { List, ListItem } from 'components/List';
@@ -27,7 +26,7 @@ export const Skills = () => {
       <ProjectContainer className={styles.uses}>
         <ProjectBackground
           src={usesBackground}
-          placeholder={usesBackgroundPlaceholder}
+          placeholder={usesBackground}
           opacity={0.7}
         />
         <ProjectHeader
