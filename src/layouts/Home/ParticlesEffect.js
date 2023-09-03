@@ -1,5 +1,7 @@
 import heroDesktop from 'assets/hero-desktop.png';
+import heroPlaceholder from 'assets/hero-placeholder.png';
 import heroTablet from 'assets/hero-tablet.png';
+
 import { Image } from 'components/Image';
 import { Transition } from 'components/Transition';
 import { useCallback } from 'react';
@@ -106,6 +108,7 @@ export const ParticlesEffect = () => {
                 className={styles.image}
                 reveal
                 delay={100}
+                placeholder={heroPlaceholder}
                 srcSet={[heroTablet, heroDesktop]}
                 sizes={`(max-width: ${media.mobile}px) 60vw,(max-width: ${media.tablet}px) 50vw, 480px`}
                 alt="Me with crossed arms"
