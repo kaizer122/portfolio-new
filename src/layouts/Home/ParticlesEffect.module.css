@@ -26,7 +26,7 @@
   }
 }
 
-.image {
+.imageContainer {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -34,4 +34,7 @@
   @media (--mediaMobile), (--mediaMobileLS) {
     margin-right: 0px;
   }
+}
+.image {
+  position: relative;
 }

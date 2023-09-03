@@ -71,7 +71,7 @@ const ImageElements = ({
   ...rest
 }) => {
   const reduceMotion = useReducedMotion();
-  const [showPlaceholder, setShowPlaceholder] = useState(true);
+  const [showPlaceholder, setShowPlaceholder] = useState(placeholder ? true : false);
   const [playing, setPlaying] = useState(!reduceMotion);
   const [videoSrc, setVideoSrc] = useState();
   const [videoInteracted, setVideoInteracted] = useState(false);
