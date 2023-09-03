@@ -27,7 +27,7 @@ const ProfileText = ({ visible, titleId }) => (
       In my spare time I like to practice chess, play video games, and work on side
       projects like
       <Link href="#"> LadChat</Link> to try out new technologies, tools and architectures.
-      I’m always down for hearing about new projects, so feel free to drop me a line.
+      I’m always down for hearing about new projects, so feel free to contact me.
     </Text>
   </Fragment>
 );
