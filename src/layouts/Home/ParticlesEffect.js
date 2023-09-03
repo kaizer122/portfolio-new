@@ -17,101 +17,103 @@ export const ParticlesEffect = () => {
   const particlesLoaded = useCallback(() => {}, []);
 
   return (
-    <Transition in timeout={3000}>
-      {visible => (
-        <div className={styles.container}>
-          <div className={styles.filler}></div>
-          <Particles
-            id="particles"
-            data-visible={visible}
-            className={styles.particles}
-            init={particlesInit}
-            loaded={particlesLoaded}
-            options={{
-              fullScreen: { enable: false },
-              background: {
-                color: {
-                  value: '',
-                },
-              },
-              fpsLimit: 120,
-              interactivity: {
-                events: {
-                  onClick: {
-                    enable: false,
-                    mode: 'push',
+    <div className={styles.container}>
+      <div className={styles.filler} />
+      <Transition in timeout={3000}>
+        {visible => (
+          <>
+            <Particles
+              id="particles"
+              data-visible={visible}
+              className={styles.particles}
+              init={particlesInit}
+              loaded={particlesLoaded}
+              options={{
+                fullScreen: { enable: false },
+                background: {
+                  color: {
+                    value: '',
                   },
-                  onHover: {
+                },
+                fpsLimit: 120,
+                interactivity: {
+                  events: {
+                    onClick: {
+                      enable: false,
+                      mode: 'push',
+                    },
+                    onHover: {
+                      enable: true,
+                      mode: 'repulse',
+                    },
+                    resize: true,
+                  },
+                  modes: {
+                    push: {
+                      quantity: 120,
+                    },
+                    repulse: {
+                      distance: 120,
+                      duration: 0.4,
+                    },
+                  },
+                },
+                particles: {
+                  color: {
+                    value: '#00FFFF',
+                  },
+                  links: {
+                    color: '#5A4FCF',
+                    distance: 150,
                     enable: true,
-                    mode: 'repulse',
+                    opacity: 0.5,
+                    width: 1,
                   },
-                  resize: true,
-                },
-                modes: {
-                  push: {
-                    quantity: 120,
-                  },
-                  repulse: {
-                    distance: 120,
-                    duration: 0.4,
-                  },
-                },
-              },
-              particles: {
-                color: {
-                  value: '#00FFFF',
-                },
-                links: {
-                  color: '#5A4FCF',
-                  distance: 150,
-                  enable: true,
-                  opacity: 0.5,
-                  width: 1,
-                },
-                collisions: {
-                  enable: true,
-                },
-                move: {
-                  direction: 'none',
-                  enable: true,
-                  outModes: {
-                    default: 'bounce',
-                  },
-                  random: false,
-                  speed: 1,
-                  straight: false,
-                },
-                number: {
-                  density: {
+                  collisions: {
                     enable: true,
-                    area: 800,
                   },
-                  value: 150,
+                  move: {
+                    direction: 'none',
+                    enable: true,
+                    outModes: {
+                      default: 'bounce',
+                    },
+                    random: false,
+                    speed: 1,
+                    straight: false,
+                  },
+                  number: {
+                    density: {
+                      enable: true,
+                      area: 800,
+                    },
+                    value: 150,
+                  },
+                  opacity: {
+                    value: 0.5,
+                  },
+                  shape: {
+                    type: 'circle',
+                  },
+                  size: {
+                    value: { min: 1, max: 5 },
+                  },
                 },
-                opacity: {
-                  value: 0.5,
-                },
-                shape: {
-                  type: 'circle',
-                },
-                size: {
-                  value: { min: 1, max: 5 },
-                },
-              },
-              detectRetina: true,
-            }}
-          />
-          <Image
-            className={styles.image}
-            reveal
-            delay={100}
-            placeholder={heroMobile}
-            srcSet={[heroTablet, heroDesktop]}
-            sizes={`(max-width: ${media.mobile}px) 60vw,(max-width: ${media.tablet}px) 50vw, 480px`}
-            alt="Me with crossed arms"
-          />
-        </div>
-      )}
-    </Transition>
+                detectRetina: true,
+              }}
+            />
+            <Image
+              className={styles.image}
+              reveal
+              delay={100}
+              placeholder={heroMobile}
+              srcSet={[heroTablet, heroDesktop]}
+              sizes={`(max-width: ${media.mobile}px) 60vw,(max-width: ${media.tablet}px) 50vw, 480px`}
+              alt="Me with crossed arms"
+            />
+          </>
+        )}
+      </Transition>
+    </div>
   );
 };

@@ -8,15 +8,15 @@ import { Transition } from 'components/Transition';
 import { VisuallyHidden } from 'components/VisuallyHidden';
 import { AnimatePresence } from 'framer-motion';
 import { useInterval, usePrevious, useScrollToHash } from 'hooks';
-import { ParticlesEffect } from 'layouts/Home/ParticlesEffect';
+import dynamic from 'next/dynamic';
 import RouterLink from 'next/link';
 import { Fragment, useEffect, useState } from 'react';
 import { cssProps } from 'utils/style';
 import styles from './Intro.module.css';
 
-// const ParticlesEffect = dynamic(() =>
-//   import('layouts/Home/ParticlesEffect').then(mod => mod.ParticlesEffect)
-// );
+const ParticlesEffect = dynamic(() =>
+  import('layouts/Home/ParticlesEffect').then(mod => mod.ParticlesEffect)
+);
 
 const disciplines = ['Full Stack', 'Express Js', 'React Js', 'Javascript', 'Typescript'];
 
