@@ -8,7 +8,7 @@ import { Transition } from 'components/Transition';
 import { VisuallyHidden } from 'components/VisuallyHidden';
 import { AnimatePresence } from 'framer-motion';
 import { useInterval, usePrevious, useScrollToHash } from 'hooks';
-import ParticlesEffect from 'layouts/Home/ParticlesEffect';
+import { ParticlesEffect } from 'layouts/Home/ParticlesEffect';
 import RouterLink from 'next/link';
 import { Fragment, useEffect, useState } from 'react';
 import { cssProps } from 'utils/style';
