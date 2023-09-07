@@ -25,6 +25,7 @@ export const ProjectSummary = ({
   model,
   buttonText,
   buttonLink,
+  buttonDisabled = false,
   alternate,
   ...rest
 }) => {
@@ -80,7 +81,12 @@ export const ProjectSummary = ({
         {description}
       </Text>
       <div className={styles.button} data-visible={visible}>
-        <Button iconHoverShift href={buttonLink} iconEnd="arrowRight">
+        <Button
+          iconHoverShift
+          href={buttonLink}
+          disabled={buttonDisabled}
+          iconEnd="arrowRight"
+        >
           {buttonText}
         </Button>
       </div>

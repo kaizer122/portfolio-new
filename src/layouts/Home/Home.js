@@ -133,8 +133,9 @@ export const Home = () => {
         index={3}
         title="Online food delivery platform"
         description="Building a platform where people living in France can order online halal food."
-        buttonText="View project"
+        buttonText="View project (Coming soon)"
         buttonLink="#"
+        buttonDisabled={true}
         model={{
           type: 'phone',
           alt: 'Customer app',
