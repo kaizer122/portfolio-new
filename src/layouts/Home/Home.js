@@ -1,3 +1,8 @@
+import halk1 from 'assets/halk-1.jpg';
+import halk2 from 'assets/halk-2.jpg';
+import ladchatPlaceholder from 'assets/ladchat-placeholder.jpg';
+import ladchat from 'assets/ladchat.jpg';
+
 import imgSosafePlaceholder from 'assets/sosafe-1-placeholder.png';
 import imgSosafe from 'assets/sosafe-1.png';
 import imgSosafeSmall from 'assets/sosafe-small.png';
@@ -7,6 +12,7 @@ import imgSplit1 from 'assets/split-1.jpg';
 import imgSplit2Placeholder from 'assets/split-2-placeholder.jpg';
 import imgSplit2Small from 'assets/split-2-small.jpg';
 import imgSplit2 from 'assets/split-2.jpg';
+
 import { Footer } from 'components/Footer';
 import { Meta } from 'components/Meta';
 import { Intro } from 'layouts/Home/Intro';
@@ -22,10 +28,12 @@ export const Home = () => {
   const projectOne = useRef();
   const projectTwo = useRef();
   const projectThree = useRef();
+  const projectFour = useRef();
+
   const details = useRef();
 
   useEffect(() => {
-    const sections = [intro, projectOne, projectTwo, projectThree, details];
+    const sections = [intro, projectOne, projectTwo, projectThree, projectFour, details];
 
     const sectionObserver = new IntersectionObserver(
       (entries, observer) => {
@@ -132,12 +140,32 @@ export const Home = () => {
           alt: 'Customer app',
           textures: [
             {
-              srcSet: [imgSplit2Small, imgSplit2],
-              placeholder: imgSplit2Placeholder,
+              srcSet: [halk1, halk1],
+              placeholder: halk1,
             },
             {
-              srcSet: [imgSplit1Small, imgSplit1],
-              placeholder: imgSplit1Placeholder,
+              srcSet: [halk2, halk2],
+              placeholder: halk2,
+            },
+          ],
+        }}
+      />
+      <ProjectSummary
+        id="project-4"
+        sectionRef={projectFour}
+        visible={visibleSections.includes(projectFour.current)}
+        index={4}
+        title="Chat Platform"
+        description="Personal project where i tried a modular architecture design and some new technologies."
+        buttonText="Visit website"
+        buttonLink="https://ladchat.kaisladjemi.com/"
+        model={{
+          type: 'laptop',
+          alt: 'Ladchat screenshot',
+          textures: [
+            {
+              srcSet: [ladchat, ladchat],
+              placeholder: ladchatPlaceholder,
             },
           ],
         }}
