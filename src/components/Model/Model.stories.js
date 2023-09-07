@@ -1,9 +1,11 @@
-import laptopTexturePlaceholder from 'assets/sosafe-1-placeholder.jpg';
-import laptopTexture from 'assets/sosafe-1-small.jpg';
-import laptopTextureLarge from 'assets/sosafe-1.jpg';
-import phoneTexture2Large from 'assets/split-1';
+import laptopTexturePlaceholder from 'assets/ladchat-placeholder.jpg';
+import {
+  default as laptopTexture,
+  default as laptopTextureLarge,
+} from 'assets/ladchat.jpg';
 import phoneTexture2Placeholder from 'assets/split-1-placeholder.jpg';
 import phoneTexture2 from 'assets/split-1-small.jpg';
+import phoneTexture2Large from 'assets/split-1.jpg';
 import phoneTexturePlaceholder from 'assets/split-2-placeholder.jpg';
 import phoneTexture from 'assets/split-2-small.jpg';
 import phoneTextureLarge from 'assets/split-2.jpg';
