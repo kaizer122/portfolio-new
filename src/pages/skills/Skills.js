@@ -72,7 +72,7 @@ export const Skills = () => {
                   <ListItem>
                     For building and testing UI components in isolation I use{' '}
                     <Link href="https://storybook.js.org/">Storybook</Link>. Check out the{' '}
-                    <Link href="https://storybook.kaisladjemi.com">
+                    <Link href="https://www.storybook.kaisladjemi.com/">
                       storybook for this website
                     </Link>
                     .
